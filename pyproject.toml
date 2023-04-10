@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "slot-filling"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "slot_filling"}]
+
+[tool.poetry.dependencies]
+python = "3.11.3"
+numpy = "^1.24.2"
+openai = "^0.27.4"
+langchain = "^0.0.134"
+gradio = "^3.24.1"
+
+[virtualenvs]
+in-project = true
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+flake8 = "^6.0.0"
+isort = "^5.12.0"
+pytest = "^7.3.0"
+
+[tool.black]
+line-length = 119
+
+[tool.flake8]
+extend-ignore = "E203,E501"
+max-line-length = 119
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
