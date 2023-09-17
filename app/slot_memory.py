@@ -7,7 +7,8 @@ from langchain.memory.chat_memory import BaseChatMemory
 from langchain.memory.entity import BaseEntityStore, InMemoryEntityStore
 from langchain.memory.utils import get_prompt_input_key
 from langchain.prompts.base import BasePromptTemplate
-from langchain.schema import BaseLanguageModel, BaseMessage, get_buffer_string
+from langchain.schema import BaseMessage, get_buffer_string
+from langchain.chat_models.base import BaseChatModel
 from pydantic import Field
 from datetime import datetime
 
@@ -16,7 +17,7 @@ from app.prompt import SLOT_EXTRACTION_PROMPT
 
 
 class SlotMemory(BaseChatMemory):
-    llm: BaseLanguageModel
+    llm: BaseChatModel
     slot_extraction_prompt: BasePromptTemplate = SLOT_EXTRACTION_PROMPT
     human_prefix: str = "Human"
     ai_prefix: str = "AI"

@@ -1,5 +1,5 @@
 from langchain.chains import ConversationChain
-from langchain.schema import BaseLanguageModel
+from langchain.chat_models.base import BaseChatModel
 from pydantic import BaseModel
 
 from app.prompt import CHAT_PROMPT
@@ -8,7 +8,7 @@ from app.slot_memory import SlotMemory
 
 class SlotFilling(BaseModel):
     memory: SlotMemory
-    llm: BaseLanguageModel
+    llm: BaseChatModel
 
     class Config:
         arbitrary_types_allowed = True

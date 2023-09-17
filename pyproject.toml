@@ -9,9 +9,9 @@ packages = [{include = "slot_filling"}]
 [tool.poetry.dependencies]
 python = "3.11.3"
 numpy = "^1.24.2"
-openai = "^0.27.4"
-langchain = "^0.0.134"
 gradio = "^3.24.1"
+langchain = "^0.0.292"
+openai = "^0.28.0"
 
 [virtualenvs]
 in-project = true
