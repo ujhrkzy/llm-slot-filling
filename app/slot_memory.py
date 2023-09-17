@@ -1,6 +1,6 @@
 import copy
 import json
-from typing import Any, Dict, List
+from typing import Any
 
 from langchain.chains.llm import LLMChain
 from langchain.memory.chat_memory import BaseChatMemory
@@ -30,7 +30,7 @@ class SlotMemory(BaseChatMemory):
     current_datetime = datetime.now().strftime("%Y/%m/%d %H:%M")
 
     @property
-    def buffer(self) -> List[BaseMessage]:
+    def buffer(self) -> list[BaseMessage]:
         """String buffer of memory."""
         if self.return_messages:
             return self.chat_memory.messages
@@ -42,14 +42,14 @@ class SlotMemory(BaseChatMemory):
             )
 
     @property
-    def memory_variables(self) -> List[str]:
+    def memory_variables(self) -> list[str]:
         """Will always return list of memory variables.
 
         :meta private:
         """
         return [self.slot_key, self.chat_history_key]
 
-    def load_memory_variables(self, inputs: Dict[str, Any]) -> Dict[str, Any]:
+    def load_memory_variables(self, inputs: dict[str, Any]) -> dict[str, Any]:
         """Return history buffer."""
         buffer_string = get_buffer_string(
             self.chat_memory.messages[-self.k * 2 :],
@@ -80,7 +80,7 @@ class SlotMemory(BaseChatMemory):
             self.slot_key: str(self.current_slots),
         }
 
-    def save_context(self, inputs: Dict[str, Any], outputs: Dict[str, str]) -> None:
+    def save_context(self, inputs: dict[str, Any], outputs: dict[str, str]) -> None:
         """Save context from this conversation to buffer."""
         super().save_context(inputs, outputs)
 

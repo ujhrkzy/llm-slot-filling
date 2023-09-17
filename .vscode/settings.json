@@ -1,23 +1,17 @@
 {
-    "[python]": {
-        "editor.defaultFormatter": null,
-        "editor.formatOnSave": true
-    },
-    "python.linting.enabled": true,
-    "python.linting.pylintEnabled": false,
-    "python.linting.flake8Enabled": true,
-    "python.linting.flake8Args": [
-        "--extend-ignore=E203,E501"
-    ],
-    "python.linting.lintOnSave": true,
-    "python.formatting.provider": "black",
-    "python.formatting.blackArgs": [
-        "--line-length=119"
-    ],
-    "editor.codeActionsOnSave": {
-        "source.organizeImports": true
-    },
-    "python.analysis.extraPaths": [
-        "./app"
-    ]
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true
+  },
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Args": ["--extend-ignore=E203,E501"],
+  "python.linting.lintOnSave": true,
+  "python.formatting.provider": "none",
+  "python.formatting.blackArgs": ["--line-length=119"],
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "python.analysis.extraPaths": ["./app"]
 }
