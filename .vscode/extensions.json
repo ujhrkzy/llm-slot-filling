@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "ms-python.python",
+        "ms-python.black-formatter",
+        "ms-python.flake8",
+        "ms-python.isort",
+        "ms-python.vscode-pylance",
+        "yzhang.markdown-all-in-one",
+        "shd101wyy.markdown-preview-enhanced",
+        "bierner.markdown-mermaid",
+        "shardulm94.trailing-spaces"
+    ]
+}
